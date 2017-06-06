@@ -2,8 +2,12 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // A:
 
-function max(){
+function max(num0, num1){
     // Your answer here
+    if(num0 > num1) {
+      return num0;
+    }
+    return num1;
 }
 
 
@@ -11,8 +15,16 @@ function max(){
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // A:
 
-function maxOfThree(){
+function maxOfThree(num0, num1, num2){
     // Your answer here
+    var max = num0;
+    if(max < num1) {
+      max = num1;
+    }
+    if(max < num2){
+      max = num2;
+    }
+    return max;
 }
 
 
@@ -22,25 +34,35 @@ function maxOfThree(){
 
 function isVowel(char){
     // Your answer here
+    if(char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+      return true;
+    }
+    return false;
 }
 
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // A:
-
+function sum(num0, num1) {
+  return num0 + num1;
+}
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // A:
-
+function avg(num0, num1, num2) {
+  return (num0 + num1 + num2)/3;
+}
 
 
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // A:
-
+function getLength(str) {
+  return str.length;
+}
 
 
 // 7.
@@ -48,7 +70,12 @@ function isVowel(char){
 // and returns `true` if the second parameter is greater than the first.
 // Otherwise the function should return `false`.
 // A:
-
+function greaterThan(num0, num1) {
+  if(num1 > num0) {
+    return true;
+  }
+  return false;
+}
 
 
 // 8.
@@ -57,7 +84,9 @@ function isVowel(char){
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 // A:
-
+function greet(name){
+  return "Hello, " + name + "!";
+}
 
 
 // 9.
@@ -68,3 +97,7 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // A:
+function madLib(word0, word1, word2, word3) {
+  
+  return ("The %s brown %s jumps over the %s with a %s.", [word0, word1, word2, word3]);
+}
