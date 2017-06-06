@@ -108,7 +108,7 @@ describe('Function', function() {
 		it('should work as described below', function(){
 			checkFuncBasics('factory')
 			var str = 'factory()() should equal the string "hello world"'
-			assert.typeOf(factory2(),'function',str)
+			assert.typeOf(factory(),'function',str)
 			assert.equal('hello world', factory()(), str)
 		})
 	})

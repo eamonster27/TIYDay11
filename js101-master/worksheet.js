@@ -67,17 +67,19 @@ function isNegative(num){
 // Write a function that will find the minimum of four
 // input numbers. You can do it using nested if statements,
 // boolean operators, or both (but not neither).
-function minFunc(num0, num1, num2, num3) {
+function minimum(num0, num1, num2, num3) {
 	var min = num0;
+
 	if(min > num1) {
 		min = num1;
 	}
-	else if(min > num2) {
+	if(min > num2) {
 		min = num2;
 	}
-	else if(min > num3) {
+	if(min > num3) {
 		min = num3;
 	}
+
 	return min;
 }
 
@@ -87,14 +89,14 @@ function minFunc(num0, num1, num2, num3) {
 // return true if either input is a string, but not
 // both or neither.
 
-function isString(arg0, arg1) {
+function justOneString(arg0, arg1) {
 	if(typeof(arg0) === "string" && typeof(arg1) !== "string"){
 		return true;
 	}
 	else if(typeof(arg0) !== "string" && typeof(arg1) === "string"){
 		return true;
 	}
-	return false; 
+	return false;
 }
 
 // HARD MODE
@@ -147,7 +149,9 @@ conditionallyInvoke(helloWorld) // should print hello world
 // Part 9
 
 var factory = function() {
-
+	return function() {
+		return 'hello world';
+	};
 }
 
 
@@ -155,6 +159,9 @@ var factory = function() {
 
 var factory2 = function() {
 	// you want more?
+	return function(return "you sly dog"){}
+		return 'you sly dog';
+	}
 }
 
 // Part 11
