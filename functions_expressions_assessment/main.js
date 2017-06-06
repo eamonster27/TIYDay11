@@ -4,7 +4,11 @@
 // Use the greater than operator `>`
 // A:
 var evaluateGreaterThan = function(num1, num2) {
-  return;
+  if(num2 > num1){
+    return false;
+  }
+
+  return true;
 }
 
 console.assert(evaluateGreaterThan(3, 2) === true);
@@ -14,7 +18,7 @@ console.assert(evaluateGreaterThan(3, 2) === true);
 // Call the `evaluateGreaterThan` function in the condition for the following if statement
 // Provide arguments to `evaluateGreaterThan` which make the if statement log 'Less than or equal to'
 // A.
-if () {
+if (!evaluateGreaterThan(num1, num2)) {
   console.log('Greater than');
 } else {
   console.log('Less than or equal to');
@@ -29,6 +33,15 @@ if () {
 // A:
 evaluateGreaterThan = function(num1, num2) {
   // Your answer here
+  if(num1 > num2) {
+    return "Greater than";
+  }
+  else if(num1 < num2) {
+    return "Less than";
+  }
+  else if(num1 === num2) {
+    return "Equal to"
+  }
 }
 
 console.assert(evaluateGreaterThan(3, 2) === 'Greater than');
@@ -41,6 +54,15 @@ console.assert(evaluateGreaterThan(2, 2) === 'Equal to');
 // A:
 evaluateGreaterThan = function(num1, num2) {
   // Your answer here
+  if(num1 > num2) {
+    return "Greater than";
+  }
+  else if(num1 < num2) {
+    return "Less than";
+  }
+  else if(num1 == num2) {
+    return "Equal to"
+  }
 }
 
 console.assert(evaluateGreaterThan("3", 2) === 'Greater than');
@@ -53,7 +75,7 @@ console.assert(evaluateGreaterThan(2, "2") === 'Equal to');
 // twoPlusTwo gets set to `undefined`. Refactor
 // the function to make it work.
 function addNumbers(numberA, numberB) {
-    console.log(numberA + numberB);
+    return numberA + numberB;
 }
 
 var twoPlusTwo = addNumbers(2, 2)
